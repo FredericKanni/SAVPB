@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/clients', 'ClientController@index');
+Route::get('/clients/{id}', 'ClientController@show');
