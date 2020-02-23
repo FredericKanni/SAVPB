@@ -1,11 +1,10 @@
 <?php
 
-use App\EchangeTypes;
+use App\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-use PhpParser\Node\Expr\New_;
 
-class EchangeTypesTableSeeder extends Seeder
+class UsersTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,15 +15,11 @@ class EchangeTypesTableSeeder extends Seeder
     {
         DB::statement('SET FOREIGN_KEY_CHECKS=0;');
         //permet de supprimer les seed eistants
-       EchangeTypes::truncate();
+       User::truncate();
        DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 
-     $tel= EchangeTypes::create([ 
-           'type'=> 'telephone' ,
-       ]);
-
-     $mail=  EchangeTypes::create([ 
-           'type'=> 'mail' ,
-       ]);
+   
+factory(User::class,6)->create();
     }
+    
 }
