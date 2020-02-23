@@ -7,6 +7,8 @@ use App\Http\Resources\ClientResource;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\Resource;
 
+use Illuminate\Support\Collection;
+
 class ClientController extends Controller
 {
      /**
@@ -19,8 +21,11 @@ class ClientController extends Controller
         $clients=Client::all();
         $clients=ClientResource::collection($clients);
       
+      
 
-        return  $clients;
+
+
+     
 
         return  view('clients')->with('clients',$clients);
     }
