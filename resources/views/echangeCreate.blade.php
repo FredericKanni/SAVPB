@@ -9,7 +9,7 @@
 <option value=" {{$user->id}}"> {{$user->nom}}</option>
 @endforeach
 
-<form method="POST" action="/echanges">
+<form method="POST" action="/api/echanges">
     {{ csrf_field() }}
 
    

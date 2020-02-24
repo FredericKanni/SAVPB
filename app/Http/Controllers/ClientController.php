@@ -34,7 +34,9 @@ class ClientController extends Controller
         $client = new ClientResource (Client::find(1)
         ->where('id', '=', $id)
         ->first());
-$echanges = Echange::all();
+$echanges = Echange::all()
+->where('id_client', '=', $id)
+;
 
 
 
