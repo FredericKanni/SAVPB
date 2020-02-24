@@ -7,8 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class Echange extends Model
 {
     protected $table = 'echanges';
-    protected $fillable = ['commentaire'];
-
+    protected $fillable = ['commentaire', 'id_user','id_client','id_echange_type','created_at','updated_at'];
+    //public $timestamps = false;
 
 
     public function user(){

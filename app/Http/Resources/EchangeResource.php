@@ -17,7 +17,7 @@ class EchangeResource extends JsonResource
         return [
             'id' => $this->id,
             'commentaire' => $this->commentaire,
-            'id_user' => $this->id_user,
+             'id_user' => $this->id_user,
             'id_client' => $this->id_client,
             'id_echange_type' => $this->id_echange_type,
             'created_at' => $this->created_at,

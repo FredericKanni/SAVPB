@@ -21,7 +21,7 @@ class CreateEchangesTable extends Migration
             $table->unsignedBigInteger('id_client');
             $table->unsignedBigInteger('id_echange_type');
 
-            $table->timestamps();
+           $table->timestamps();
         });
 
         Schema::table('echanges', function($table) {
