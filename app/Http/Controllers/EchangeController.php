@@ -58,8 +58,12 @@ $data = [ $users, $EchangeTypes, $clients];
 
         //Ajout en bdd des données validées par le validator
        $echange = Echange::create($dataEchange );
+
+       
         //Retourne le circuit formaté grace à la ressource
-        return new EchangeResource($echange);
+      //  return new EchangeResource($echange);
+
+      return redirect('/echanges/create');
     }
 
 
