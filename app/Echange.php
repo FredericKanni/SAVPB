@@ -20,6 +20,6 @@ class Echange extends Model
     }
 
     public function echangeType(){
-        return $this ->belongsTo('App\Type', 'id_echange_type');
+        return $this ->belongsTo('App\EchangeTypes', 'id_echange_type');
     }
 }

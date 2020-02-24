@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Client;
+use App\Echange;
 use App\Http\Resources\ClientResource;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\Resource;
@@ -18,15 +19,8 @@ class ClientController extends Controller
      */
     public function index()
     {
-        $clients=Client::all();
-        $clients=ClientResource::collection($clients);
-      
-      
-
-
-
-     
-
+        $clients=Client::all('id','nom','prenom');
+       // $clients=ClientResource::collection($clients);
         return  view('clients')->with('clients',$clients);
     }
 
@@ -40,6 +34,11 @@ class ClientController extends Controller
         $client = new ClientResource (Client::find(1)
         ->where('id', '=', $id)
         ->first());
-        return   $client ;
+$echanges = Echange::all();
+
+
+
+       // return   $client ;
+       return  view('ficheClient')->with('client',$client)->with('echanges',$echanges);
     }
 }
