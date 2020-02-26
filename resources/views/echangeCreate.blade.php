@@ -5,9 +5,7 @@
 @section('contenu')
   
 
-@foreach ($users as $user )
-<option value=" {{$user->id}}"> {{$user->nom}}</option>
-@endforeach
+<h1 class="text-center">Ajouter un échange</h1>
 
 <form method="POST" action="/api/echanges">
     {{ csrf_field() }}

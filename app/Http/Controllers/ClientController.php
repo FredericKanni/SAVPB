@@ -39,8 +39,6 @@ $echanges = Echange::all()
 ;
 
 
-
-       // return   $client ;
        return  view('ficheClient')->with('client',$client)->with('echanges',$echanges);
     }
 }
