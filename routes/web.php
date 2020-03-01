@@ -20,4 +20,4 @@ Route::get('/clients', 'ClientController@index');
 Route::get('/clients/{id}', 'ClientController@show');
 
 Route::get('/echanges/create', 'EchangeController@create');
-
+Route::post('/echanges', 'EchangeController@store');
