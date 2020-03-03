@@ -61,8 +61,8 @@
                   <td>{{$echange->echangeType->type}}</td>
                   <td>({{$echange->id_user}})     {{$echange->user->nom}} </td>
               
-                  <td>{{$echange->created_at}}    </td>
-                  <td>{{$echange->commentaire}} {{$echange->id_client}} {{$echange->client->nom}} </td>
+                  <td>{{ date('d-M-y', strtotime($echange->date)) }}  </td>
+                  <td>{{$echange->commentaire}} </td>
                 </tr>
                 @endforeach 
 

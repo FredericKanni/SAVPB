@@ -36,7 +36,7 @@
                 <select name='id_client' class="form-control" id="id_client" required>
                         <option> choisir</option>
                         @foreach ($clients as $client )
-                        <option value=" {{$client->id}}">  {{$client->nom}} {{$client->prenom}}</option>
+                        <option value=" {{$client->id}}"> {{$client->nom}} {{$client->prenom}}</option>
                         @endforeach
 
 
@@ -62,22 +62,32 @@
                 @enderror
 
 
-        </div >
+        </div>
         <div class="form-group">
 
-        <label for="commentaire">commentaire :</label> <br>
-        <textarea  class="form-control"  rows="3"  name="commentaire" id="commentaire">  </textarea>
-        
-        @error('commentaire')
-        <div class="alert alert-danger">{{ $message }}</div>
-        @enderror
-</div >
-<p>(*) : champs obligatoires</p>
+                <label for="commentaire">commentaire :</label> <br>
+                <textarea class="form-control" rows="3" name="commentaire" id="commentaire">  </textarea>
+
+                @error('commentaire')
+                <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
+        </div>
+
+        <div class="form-group">
+
+                <label for="date">date :</label> <br>
+                {{-- <textarea class="form-control" rows="3" name="date" id="date">  </textarea> --}}
+<input class="form-control" type="date" name="date" id="date">
+                {{-- @error('commentaire')
+                <div class="alert alert-danger">{{ $message }}</div>
+                @enderror --}}
+        </div>
+        <p>(*) : champs obligatoires</p>
 
 
         <button type="submit" class="btn btn-primary">valider</button>
-      
 
-        
+
+
 </form>
 @endsection
