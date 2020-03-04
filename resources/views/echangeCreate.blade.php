@@ -63,6 +63,16 @@
 
 
         </div>
+
+        <div class="form-group">
+
+                <label for="date">date :</label> <br>
+                {{-- <textarea class="form-control" rows="3" name="date" id="date">  </textarea> --}}
+                <input class="form-control" type="date" name="date" id="date">
+                @error('date')
+                <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
+        </div>
         <div class="form-group">
 
                 <label for="commentaire">commentaire :</label> <br>
@@ -73,19 +83,13 @@
                 @enderror
         </div>
 
-        <div class="form-group">
-
-                <label for="date">date :</label> <br>
-                {{-- <textarea class="form-control" rows="3" name="date" id="date">  </textarea> --}}
-<input class="form-control" type="date" name="date" id="date">
-                {{-- @error('commentaire')
-                <div class="alert alert-danger">{{ $message }}</div>
-                @enderror --}}
-        </div>
+       
         <p>(*) : champs obligatoires</p>
 
-
-        <button type="submit" class="btn btn-primary">valider</button>
+<div class="text-center">
+        <button type="submit" class="btn btn-primary w-25 p-3">valider</button>
+</div>
+        
 
 
 

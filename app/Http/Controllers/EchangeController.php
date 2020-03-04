@@ -39,9 +39,8 @@ class EchangeController extends Controller
                        'id_user' => 'bail|required|integer',
                       'id_client' => 'bail|required|integer',
                       'id_echange_type' => 'bail|required|integer',
-                      'created_at',
-                      'updated_at',
-                      'date'
+                      
+                      'date'=> 'bail|required|',
         ]
         ,
                 [
