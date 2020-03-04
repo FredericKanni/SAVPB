@@ -13,13 +13,37 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::statement('SET FOREIGN_KEY_CHECKS=0;');
-        //permet de supprimer les seed eistants
-       User::truncate();
-       DB::statement('SET FOREIGN_KEY_CHECKS=1;');
+    
+        $paula=  User::create([ 
+            'nom'=> 'paula' ,
+        ]);
 
-   
-factory(User::class,6)->create();
+        $mia=  User::create([ 
+            'nom'=> 'mia' ,
+        ]);
+
+
+
+
+
+        $julie=  User::create([ 
+            'nom'=> 'julie' ,
+        ]);
+
+        $morgane=  User::create([ 
+            'nom'=> 'morgane' ,
+        ]);
+
+
+
+
+        $sakura=  User::create([ 
+            'nom'=> 'sakura' ,
+        ]);
+        $pan=  User::create([ 
+            'nom'=> 'pan' ,
+        ]);
+
     }
     
 }
