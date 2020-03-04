@@ -14,15 +14,49 @@ class ClientsTableSeeder extends Seeder
     public function run()
     {
 
-        //desactive les contrainte de foreign key
-        DB::statement('SET FOREIGN_KEY_CHECKS=0;');
-        //supprime les valeur dans / vide  la table
-        Client::truncate();
-        //reactive les contrainte de foreign key
-        DB::statement('SET FOREIGN_KEY_CHECKS=1;');
+
+        $julie=  Client::create([ 
+            'nom'=> 'julie' ,
+            'prenom' => 'thomas',
+            'telephone' => '0693901886',
+            'mail' => 'juliethomas@gmail.com',
+        ]);
 
 
-factory(Client::class,30)->create();
+
+        $julie=  Client::create([ 
+            'nom'=> 'julie' ,
+            'prenom' => 'thomas',
+            'telephone' => '0693901886',
+            'mail' => 'juliethomas@gmail.com',
+        ]);
+
+
+        $tom=  Client::create([ 
+            'nom'=> 'tom' ,
+            'prenom' => 'thomas',
+            'telephone' => '0693901886',
+            'mail' => 'tomthomas@gmail.com',
+        ]);
+
+
+
+        $marie=  Client::create([ 
+            'nom'=> 'marie' ,
+            'prenom' => 'thomas',
+            'telephone' => '0693901886',
+            'mail' => 'mariethomas@gmail.com',
+        ]);
+
+
+        $julia=  Client::create([ 
+            'nom'=> 'julia' ,
+            'prenom' => 'thomas',
+            'telephone' => '0693901886',
+            'mail' => 'juliathomas@gmail.com',
+        ]);
+    
+      
 
     
     }
