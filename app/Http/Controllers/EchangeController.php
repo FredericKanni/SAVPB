@@ -40,7 +40,7 @@ class EchangeController extends Controller
                       'id_client' => 'bail|required|integer',
                       'id_echange_type' => 'bail|required|integer',
                       
-                      'date'=> 'bail|required|',
+                    
         ]
         ,
                 [
@@ -69,7 +69,7 @@ class EchangeController extends Controller
        //Ajout en bdd des données validées par le validator
        $echange = new Echange;
        $echange->commentaire = $request->commentaire;
-       $echange->date = $request->date;
+     
        $echange->id_user = $request->id_user;
        $echange->id_client = $request->id_client;
        $echange->id_echange_type = $request->id_echange_type;

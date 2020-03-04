@@ -21,7 +21,9 @@ class EchangeResourceCollection extends JsonResource
              'id_user' => $this->id_user,
             'id_client' => $this->id_client,
             'id_echange_type' => $this->id_echange_type,
-            'date' => '$this->date',]
+            'created_at' => $this->created_at,
+            'updated_at' => $this->updated_at,
+            ]
 
            
         ];

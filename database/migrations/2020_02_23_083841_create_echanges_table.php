@@ -16,7 +16,6 @@ class CreateEchangesTable extends Migration
         Schema::create('echanges', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->text('commentaire')->nullable();
-            $table->date('date');
             $table->unsignedBigInteger('id_user');
             $table->unsignedBigInteger('id_client');
             $table->unsignedBigInteger('id_echange_type');

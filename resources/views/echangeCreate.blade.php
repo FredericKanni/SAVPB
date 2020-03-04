@@ -64,15 +64,7 @@
 
         </div>
 
-        <div class="form-group">
-
-                <label for="date">date :</label> <br>
-                {{-- <textarea class="form-control" rows="3" name="date" id="date">  </textarea> --}}
-                <input class="form-control" type="date" name="date" id="date">
-                @error('date')
-                <div class="alert alert-danger">{{ $message }}</div>
-                @enderror
-        </div>
+       
         <div class="form-group">
 
                 <label for="commentaire">commentaire :</label> <br>
